@@ -108,7 +108,7 @@ def initialize_chain(selected_model: str, pdf_path: str):
 # -------------------------------------------------------------------
 # ✅ Streamlit UI
 # -------------------------------------------------------------------
-st.set_page_config(page_title="기후변화적응챗봇", page_icon="📚")
+st.set_page_config(page_title="기후변화챗봇", page_icon="📚")
 st.header("기후변화챗봇 💬📚")
 
 # 모델 선택
@@ -165,6 +165,7 @@ if prompt_message := st.chat_input("질문을 입력하세요"):
                 for doc in response.get("context", []):
                     src = doc.metadata.get("source", "source")
                     st.markdown(src, help=doc.page_content)
+
 
 
 
